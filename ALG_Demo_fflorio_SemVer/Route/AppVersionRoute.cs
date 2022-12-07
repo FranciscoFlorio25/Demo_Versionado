@@ -8,9 +8,10 @@ namespace ALG_Demo_fflorio_SemVer.Route
         {
             builder.MapGet("/appVersion", () =>
             {
-                var AppVersion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppVersion")["Version"];
                 
-                return AppVersion;
+                var appVersion = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppVersion")["Version"];
+                var version = "AppVersion " + appVersion;
+                return version;
             })
             .WithName("GetVersion");
 
