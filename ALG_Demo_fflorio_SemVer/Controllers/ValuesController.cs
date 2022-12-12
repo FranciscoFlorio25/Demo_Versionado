@@ -17,9 +17,9 @@ namespace ALG_Demo_fflorio_SemVer.Controllers
         }
 
         [HttpGet(Name = "GetVersion")]
-        public AppVersionDTO GetVersion()
+        public IActionResult GetVersion()
         {
-            return new AppVersionDTO( _configuration.GetVersion());
+            return Ok( new AppVersionDTO( _configuration.GetVersion()));
         }
     }
 }
