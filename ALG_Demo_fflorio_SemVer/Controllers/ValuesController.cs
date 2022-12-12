@@ -1,4 +1,4 @@
-﻿using ALG_Demo_fflorio_SemVer.Configuration;
+﻿using ALG_Demo_fflorio_SemVer.Manager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,9 +8,9 @@ namespace ALG_Demo_fflorio_SemVer.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly AppVersionConfiguration _configuration;
+        private readonly AppVersionManager _configuration;
 
-        public ValuesController(AppVersionConfiguration configuration)
+        public ValuesController(AppVersionManager configuration)
         {
             _configuration = configuration;
         }
