@@ -15,7 +15,7 @@ namespace ALG_Demo_fflorio_SemVer.Manager
 
         public string GetVersion()
         {
-            return "Version: " + _version.Version;
+            return _version.Version;
         }
     }
 }

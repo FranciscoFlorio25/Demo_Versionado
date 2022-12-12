@@ -1,4 +1,5 @@
-﻿using ALG_Demo_fflorio_SemVer.Manager;
+﻿using ALG_Demo_fflorio_SemVer.DTO;
+using ALG_Demo_fflorio_SemVer.Manager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +17,9 @@ namespace ALG_Demo_fflorio_SemVer.Controllers
         }
 
         [HttpGet(Name = "GetVersion")]
-        public string GetVersion()
+        public AppVersionDTO GetVersion()
         {
-            return _configuration.GetVersion();
+            return new AppVersionDTO( _configuration.GetVersion());
         }
     }
 }
