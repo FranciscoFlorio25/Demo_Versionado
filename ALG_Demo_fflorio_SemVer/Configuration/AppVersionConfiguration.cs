@@ -1,13 +1,13 @@
 ﻿using ALG_Demo_fflorio_SemVer.Model;
 using Microsoft.Extensions.Options;
 
-namespace ALG_Demo_fflorio_SemVer.Manager
+namespace ALG_Demo_fflorio_SemVer.Configuration
 {
-    public class AppVersionManager
+    public class AppVersionConfiguration
     {
         private readonly AppVersion _version;
 
-        public AppVersionManager(IOptions<AppVersion> version)
+        public AppVersionConfiguration(IOptions<AppVersion> version)
         {
             _version = version.Value;
         }

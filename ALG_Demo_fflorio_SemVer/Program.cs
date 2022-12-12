@@ -1,6 +1,6 @@
 
 
-using ALG_Demo_fflorio_SemVer.Manager;
+using ALG_Demo_fflorio_SemVer.Configuration;
 using ALG_Demo_fflorio_SemVer.Model;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<AppVersionManager>();
+builder.Services.AddScoped<AppVersionConfiguration>();
 builder.Services.AddOptions <AppVersion>().Bind(builder.Configuration.GetSection(key: "AppVersion"));
 
 var app = builder.Build();
